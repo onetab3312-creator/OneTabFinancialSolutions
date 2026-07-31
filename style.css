@@ -1,0 +1,322 @@
+/* ==========================================
+   ONE TAB FINANCIAL SOLUTIONS
+   Version 1.0
+========================================== */
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7faff;
+    color:#1d3557;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   SPLASH SCREEN
+========================================== */
+
+#splash-screen{
+    position:fixed;
+    inset:0;
+
+    background:#ffffff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    animation:fadeOut .8s ease forwards;
+    animation-delay:4s;
+}
+
+#splash-screen img{
+
+    width:430px;
+    max-width:80%;
+    height:auto;
+
+    opacity:0;
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+#main-content{
+
+    display:none;
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f4f8ff 100%
+    );
+
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.logo{
+    width: 200px;
+    margin-bottom:25px;
+    animation:fadeDown 1s ease;
+}
+.hero h1{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    color:#0B63F6;
+
+    line-height:1.1;
+
+}
+
+.hero h1 span{
+
+    display:block;
+
+    font-size:34px;
+
+    color:#083A9B;
+
+    font-weight:500;
+
+    margin-top:8px;
+
+}
+
+/* ==========================================
+   HIGHLIGHTS
+========================================== */
+
+.highlights{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.highlight{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:21px;
+
+    font-weight:500;
+
+    color:#142350;
+
+    letter-spacing:0.3px;
+
+}
+
+.highlight i{
+
+    color:#142350;
+
+    font-size:24px;
+
+}
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn{
+
+    margin-top:50px;
+
+    display:inline-block;
+
+    background:#0B63F6;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:18px 50px;
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(11,99,246,.25);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#083A9B;
+
+    box-shadow:0 20px 45px rgba(11,99,246,.35);
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.logo{
+
+    width:120px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero h1 span{
+
+    font-size:24px;
+
+}
+
+.hero h2{
+
+    font-size:24px;
+
+}
+
+.subtitle{
+
+    font-size:17px;
+
+}
+
+.tagline{
+
+    font-size:20px;
+
+}
+
+.btn{
+
+    width:100%;
+
+    max-width:320px;
+
+}
+
+.highlight{
+
+    font-size:18px;
+
+    padding:0 15px;
+
+    text-align:left;
+
+    align-items:flex-start;
+
+}
+
+.highlight i{
+
+    margin-top:4px;
+
+}
+
+}
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes fadeOut{
+
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+
+}
